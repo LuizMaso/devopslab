@@ -17,7 +17,7 @@ install:
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.                                                                                                                            
 script:                                                                                                                                                                                                  
   - python3 -m unittest -v test || travis_terminate 1;
-  - sonar-scanner || travis_terminate 1 -X;
+  - sonar-scanner || travis_terminate 1;
 # Definir o Deploy no Heroku
 
 deploy:
@@ -29,5 +29,6 @@ deploy:
       branch: main
 addons:
   sonarcloud:
-    organization: luizmaso
-    token: ${SONAR_TOKEN}
+    organization: "luizmaso"
+    token:
+      secure: ${SONAR_TOKEN}
