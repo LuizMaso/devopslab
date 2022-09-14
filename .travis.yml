@@ -31,4 +31,4 @@ addons:
   sonarcloud:
     organization: "luizmaso"
     token:
-      secure: d3be2547442f7f6e2f5c9495df5b05049126536e
+      secure: ${SONAR_TOKEN}
