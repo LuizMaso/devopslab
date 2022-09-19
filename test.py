@@ -10,7 +10,6 @@ class Test(unittest.TestCase):
         # envia uma requisicao GET para a URL                                                                                                                                                            
         self.result = self.app.get('/')                                                                                                                                                                  
 
-
     def test_conteudo(self):                                                                                                                                                                             
         # verifica o retorno do conteudo da pagina                                                                                                                                                       
         self.assertEqual(self.result.data.decode('utf-8'), "Laboratório DevOps - FIAP 8ASO - Aluno Luiz Eduardo Silva Andrade")
