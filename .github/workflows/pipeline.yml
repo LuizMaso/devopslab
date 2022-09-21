@@ -53,7 +53,7 @@ jobs:
 
       # Adicionando o Repositório Remoto do Heroku para poder enviar o código da app
       - name: Add Heroku Remote
-        run: heroku git:remote --app $HEROKU_APP_NAME
+        run: heroku git:remote -a $HEROKU_APP_NAME
         env:
             HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
 
